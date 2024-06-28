@@ -13,17 +13,6 @@
   width: 400px;
 }
 
-.topic {
-  display: flex;
-  justify-content: center;
-  padding-top: 80px;
-
-}
-
-.topic-text {
-  font-size: 20px;
-}
-
 .data {
   font-size: 14px;
 }

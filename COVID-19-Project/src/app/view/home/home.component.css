@@ -3,24 +3,30 @@ nz-select {
 }
 
 [nz-button] {
-  margin-right: 8px;
+  /* margin-right: 8px; */
   margin-bottom: 12px;
+  width: 100%;
+  /* margin: 25px 25px; */
 }
 
 .form-center {
   margin-top: 5rem;
+  width: 30%;
 }
 
-.header {
-  margin-top: 5rem;
+.topic {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+
 }
 
-.header-size {
-  font-size: 36px;
+.topic-text {
+  font-size: 20px;
 }
 
 .form-input {
-  width: 20rem;
+  width: 100%;
 }
 
 .form-select {

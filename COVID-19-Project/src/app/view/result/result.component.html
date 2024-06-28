@@ -1,46 +1,69 @@
-<div>
-  <div nz-flex nzJustify="center" class="header">
-    <span class="header-size">COVID-19 Vaccination Registration Result</span>
+<div style="background-color: blanchedalmond; height: 100%;">
+  <div class="topic">
+    <label class="topic-text">ผลการลงทะเบียนเข้ารับบริการฉีดวัคซีน</label>
   </div>
   <div nz-flex nzJustify="center">
-
     <form nz-form [formGroup]="resultForm" class="form-center">
-      <nz-form-item>
-        <nz-form-label [nzSpan]="7">ชื่อ-นามสกุล</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-          <nz-form-text class="data">{{this.result.name}}</nz-form-text>
-        </nz-form-control>
-      </nz-form-item>
 
-      <nz-form-item>
-        <nz-form-label [nzSpan]="7">เลขบัตรประชาชน</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-          <nz-form-text class="data">{{this.result.idCard | mask: '0-0000-00000-00-0'}}</nz-form-text>
-        </nz-form-control>
-      </nz-form-item>
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; font-weight: 700; ">
+          <nz-form-item>
+            <nz-form-label>ชื่อ-นามสกุล</nz-form-label>
+          </nz-form-item>
 
-      <nz-form-item>
-        <nz-form-label [nzSpan]="7">เพศ</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-          <nz-form-text class="data">{{this.result.gender}}</nz-form-text>
-        </nz-form-control>
-      </nz-form-item>
+          <nz-form-item>
+            <nz-form-label>เลขบัตรประชาชน</nz-form-label>
+          </nz-form-item>
 
-      <nz-form-item>
-        <nz-form-label [nzSpan]="7">วัน/เดือน/ปีเกิด</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-          <nz-form-text class="data">{{this.result.birthDate | thaiDate}}</nz-form-text>
-        </nz-form-control>
-      </nz-form-item>
+          <nz-form-item>
+            <nz-form-label>เพศ</nz-form-label>
+          </nz-form-item>
 
-      <nz-form-item>
-        <nz-form-label [nzSpan]="7">สถานะเข้ารับบริการ</nz-form-label>
-        <nz-form-control [nzSpan]="12">
-          <nz-form-text class="data" [style.color]="this.color">{{this.status}}</nz-form-text>
-        </nz-form-control>
-      </nz-form-item>
+          <nz-form-item>
+            <nz-form-label>วัน/เดือน/ปีเกิด</nz-form-label>
+          </nz-form-item>
 
-      <div nz-flex nzJustify="center">
+          <nz-form-item>
+            <nz-form-label>สถานะเข้ารับบริการ</nz-form-label>
+          </nz-form-item>
+
+        </div>
+
+        <div>
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-text class="data">{{this.result.name}}</nz-form-text>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-text class="data">{{this.result.idCard | mask: '0-0000-00000-00-0'}}</nz-form-text>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-text class="data">{{this.result.gender}}</nz-form-text>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-text class="data">{{this.result.birthDate | thaiDate}}</nz-form-text>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-text class="data" [style.color]="this.color">{{this.status}}</nz-form-text>
+            </nz-form-control>
+          </nz-form-item>
+
+        </div>
+      </div>
+
+      <div>
         <button nz-button nzType="default" (click)="goBack()">
           <span nz-icon nzType="left"></span>
           ย้อนกลับ
@@ -50,4 +73,6 @@
     </form>
 
   </div>
+
+
 </div>
