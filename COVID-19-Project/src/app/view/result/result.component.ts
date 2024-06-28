@@ -81,14 +81,6 @@ export class ResultComponent implements OnInit {
   }
 
   getAge(birthDate: Date): number {
-    // const today = new Date();
-    // let age = today.getFullYear() - birthDate.getFullYear();
-    // const m = today.getMonth() - birthDate.getMonth();
-    // if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    //   age--;
-    // }
-    // return age;
-
     const maxYear = 2023;
     const maxMonth = 7; //0=jan - 11=dec//
     const maxDate = 31;
